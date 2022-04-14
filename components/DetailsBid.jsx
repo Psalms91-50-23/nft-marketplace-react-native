@@ -1,5 +1,4 @@
 import { View, Text, Image } from 'react-native';
-import React from 'react';
 import { EthPrice } from './SubInfo';
 import { COLORS, SIZES, PADDINGS } from "../constants";
 

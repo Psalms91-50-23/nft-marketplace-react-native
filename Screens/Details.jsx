@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView, Image, StatusBar, FlatList } from 'react-nati
 import { COLORS, SIZES, SHADOWS, FONTS, assets, PADDINGS } from "../constants"
 import { CircleButton, RectButton, SubInfo, FocusedStatusBar, 
   DetailsDesc, DetailsBid } from '../components';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const DetailsHeader = ({ data, navigation }) => {
 

@@ -120,7 +120,7 @@ export const EndDate = () => {
   )
 }
 
-export const SubInfo = ({ days, hours, mins}) => {
+export const SubInfo = () => {
   return (
     <View style={{
         width: "100%",
@@ -130,7 +130,7 @@ export const SubInfo = ({ days, hours, mins}) => {
         justifyContent: "space-between",
     }}>
       <People />
-      <EndDate days={days} hours={hours} mins={mins}/>
+      <EndDate />
     </View>
   )
 }

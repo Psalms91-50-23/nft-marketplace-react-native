@@ -9,12 +9,18 @@ const Home = () => {
 
   const handleSearch = (value) => {
     if(!value.length) return setNftData(NFTData)
-    const filteredData = NFTData.filter( item => 
-      item.name.toLowerCase().includes(value.toLowerCase())
+    const filteredData = NFTData.filter( item => {
+
+      if(item.name.toLowerCase().includes(value.toLowerCase())){
+        item.bids = item.bids.reverse();
+        return item
+      }
+    }
       );
     if(filteredData.length){
       setNftData(filteredData)
     }else{
+      console.log({NFTData});
       setNftData(NFTData)
     }
 }

@@ -4,7 +4,6 @@ import { Platform } from 'react-native';
 import { COLORS, SIZES, SHADOWS, assets, PADDINGS } from '../constants';
 import { CircleButton, RectButton } from './Button';
 import { SubInfo, EthPrice, NFTTitle } from './SubInfo';
-import { useEffect } from "react";
 
 const NFTCard = ({ data, index, dataLength }) => {
 
@@ -42,7 +41,6 @@ const NFTCard = ({ data, index, dataLength }) => {
             height: "100%",
             borderTopLeftRadius: SIZES.font,
             borderTopRightRadius: SIZES.font,
-            // borderColor: "transparent"
           }}
         />
         <CircleButton 
