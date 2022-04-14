@@ -29,6 +29,7 @@ const DetailsDesc = ({ data }) => {
             />
             <View style={{
                 alignItems: "flex-end",
+                paddingRight: PADDINGS.medium 
                 }}>
                 {
                     data.bids.length ? 
@@ -45,12 +46,13 @@ const DetailsDesc = ({ data }) => {
         </View>
         <View style={{
            marginVertical: SIZES.extraLarge * 1.5,
-           paddingHorizontal: 5
+           paddingHorizontal: PADDINGS.medium - 1
             }}>
             <Text style={{
                 fontSize: SIZES.font,
                 fontFamily: FONTS.semiBold,
-                color: COLORS.primary
+                color: COLORS.primary,
+                paddingLeft: PADDINGS.mediumLarge
                 }}>
                 Description
             </Text>
@@ -62,7 +64,8 @@ const DetailsDesc = ({ data }) => {
                     fontFamily: FONTS.regular,
                     color: COLORS.secondary,
                     lineHeight: SIZES.large,
-                    marginBottom: !data.bids.length ? 20 : 0
+                    marginBottom: !data.bids.length ? 20 : 0,
+                    paddingHorizontal: PADDINGS.mediumLarge
                     }}>
                     {text}
                     {!readMore && '...'}

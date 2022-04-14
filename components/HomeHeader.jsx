@@ -1,6 +1,5 @@
 import { View, Text, Image, TextInput } from 'react-native';
 import { COLORS, FONTS, SIZES, assets, PADDINGS } from "../constants";
-import { Platform } from 'react-native';
 
 const HomeHeader = ({ onSearch }) => {
 
@@ -75,7 +74,6 @@ const HomeHeader = ({ onSearch }) => {
       </View>
       <View style={{
         marginTop: SIZES.base / 2
-        // marginTop: SIZES.font
       }}>
         <View style={{
           width: "100%",
@@ -100,9 +98,6 @@ const HomeHeader = ({ onSearch }) => {
             style={{
               flex: 1,
               color: COLORS.white,
-              // outlineStyle: Platform.OS !== 'ios' || Platform.OS !== 'android' ? "none" : "block",
-              // borderStyle: Platform.OS !== 'ios' || Platform.OS !== 'android' ? "none" : "block",
-              // fontWeight: "600",
               fontSize: SIZES.large
             }}
             placeholderTextColor={COLORS.white}

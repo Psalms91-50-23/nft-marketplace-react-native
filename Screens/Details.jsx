@@ -27,8 +27,7 @@ const DetailsHeader = ({ data, navigation }) => {
         justifyContent: "space-between",
         position: "absolute",
         width: "100%",
-        paddingHorizontal: 5,
-        // left: 15,
+        paddingHorizontal: PADDINGS.large,
         top: StatusBar.currentHeight + 10
         }}>
           <CircleButton 
@@ -52,7 +51,6 @@ const Details = ({ route, navigation }) => {
       }}>
         <FocusedStatusBar 
           barStyle="dark-content"
-          // backgroundColor="transparent"
           backgroundColor="rgba(255,255,255,0.5)"
           translucent={true}
         />
@@ -95,7 +93,8 @@ const Details = ({ route, navigation }) => {
                     fontSize: SIZES.font,
                     fontFamily: FONTS.semiBold,
                     color: COLORS.primary,
-                    paddingHorizontal: 5
+                    paddingLeft: PADDINGS.extraLarge,
+                    
                     }}>
                     Current Bids
                   </Text>

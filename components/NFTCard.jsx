@@ -74,7 +74,8 @@ const NFTCard = ({ data, index, dataLength }) => {
             <Text style={{
               fontSize: SIZES.font - 2,
               fontStyle: "italic",
-              marginBottom: SIZES.base - 4
+              marginBottom: SIZES.base - 4,
+              paddingLeft: PADDINGS.large - 2
             }}>
               Current bid at
             </Text>
@@ -82,7 +83,8 @@ const NFTCard = ({ data, index, dataLength }) => {
             <Text style={{
               fontSize: SIZES.font - 2,
               fontStyle: "italic",
-              marginBottom: SIZES.base - 4
+              marginBottom: SIZES.base - 4,
+              paddingLeft: PADDINGS.large
             }}>
               Starting bid at
             </Text>

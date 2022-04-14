@@ -7,12 +7,14 @@ assets.person08, assets.person09 ]
 
 export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
   return (
-    <View>
+    <View style={{
+      paddingHorizontal: PADDINGS.large,
+      marginLeft: -3
+    }}>
       <Text style={{
         fontFamily: FONTS.semiBold,
         fontSize: titleSize,
         color: COLORS.primary,
-        marginLeft: -1
       }}>{title}</Text>
       <Text style={{
         fontFamily: FONTS.regular,
@@ -28,6 +30,7 @@ export const EthPrice = ({ price }) => {
     <View style={{
       flexDirection: "row",
       alignItems: "center",
+      paddingLeft: PADDINGS.large - 4
 
     }}>
       <Image 
@@ -37,6 +40,7 @@ export const EthPrice = ({ price }) => {
           width: 15,
           height: 15,
           marginRight: 2,
+          marginLeft: -1
         }}
       />
       <Text style={{
@@ -53,14 +57,11 @@ export const ImageCmp = ({ imgUrl, index }) => {
     <View style={{
       width: 48,
       height: 48,
-      // borderRadius: SIZES.extraLarge,
-      marginLeft: index === 0 ? -10 : -SIZES.large-3,
+      marginLeft: index === 0 ? 0 : -SIZES.large-3,
       marginRight: index === IMAGES.length-1 ? 3 : 0,
       paddingHorizontal: index === 0 || index === 1 || index === 2 ? 1 : 3,
       paddingVertical:index === 0 || index === 1 || index === 2 ? 1 : 3,
       borderRadius: SIZES.extraLarge,
-      // borderWidth: 2,
-      // borderColor: COLORS.white,
       backgroundColor: COLORS.white
     }}>
       <Image 
@@ -112,7 +113,7 @@ export const EndDate = () => {
       }}>Ending In</Text>
       <Text style={{
         fontFamily: FONTS.semiBold,
-        fontSize: SIZES.font-2,
+        fontSize: SIZES.font - 2,
         color: COLORS.primary
       }}>{days}d {hours}h {mins}m</Text>
     </View>
@@ -123,10 +124,10 @@ export const SubInfo = ({ days, hours, mins}) => {
   return (
     <View style={{
         width: "100%",
-        paddingHorizontal: SIZES.font,
+        paddingHorizontal: PADDINGS.large,
         marginTop: -SIZES.extraLarge,
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
     }}>
       <People />
       <EndDate days={days} hours={hours} mins={mins}/>

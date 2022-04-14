@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { Text, View, SafeAreaView, FlatList,
-  ScrollView } from 'react-native';
-import { Platform } from 'react-native';
+import { View, SafeAreaView, FlatList } from 'react-native';
 import { COLORS, NFTData } from "../constants";
 import { NFTCard, HomeHeader, FocusedStatusBar } from '../components';
 
@@ -33,11 +31,7 @@ const Home = () => {
             flex: 1,
             maxWidth: 700,
             width: "100%",
-            // position: "relative"
             }}
-            // alwaysBounceVertical={ Platform.OS === "ios" ? true : false }
-            // fadingEdgeLength={ Platform.OS === "android" ? 4 : 0 }
-            // showsVerticalScrollIndicator={ Platform.OS === "android" ? true : "none"}
             >
               <View style={{ 
                 zIndex: 0,
@@ -47,11 +41,7 @@ const Home = () => {
                   <FlatList 
                     data={nftData}
                     renderItem={({ item, index }) => <NFTCard data={item} dataLength={nftData.length-1} index={index} />}
-                    keyExtractor={(item) => item.id}
-                    // showsVerticalScrollIndicator={false}
-                    // fadingEdgeLength={ Platform.OS === "android" ? 4 : 0 }
-                    // showsVerticalScrollIndicator={ Platform.OS === "android" ? true : "none"}
-                    // ListHeaderComponent={<HomeHeader />}   
+                    keyExtractor={(item) => item.id} 
                   /> 
               </View>
               <View style={{

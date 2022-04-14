@@ -1,14 +1,15 @@
 import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { EthPrice } from './SubInfo';
-import { COLORS, SIZES, FONTS, PADDINGS } from "../constants";
+import { COLORS, SIZES, PADDINGS } from "../constants";
 
 const DetailsBid = ({ bid, bidLength, index }) => {
 
   return (
     <View style={{
       width: "100%",
-      paddingHorizontal: 5,
+      paddingLeft: PADDINGS.extraLarge + 2,
+      paddingRight: PADDINGS.large,
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
