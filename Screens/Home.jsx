@@ -40,7 +40,10 @@ const Home = () => {
                   <HomeHeader onSearch={handleSearch} />
                   <FlatList 
                     data={nftData}
-                    renderItem={({ item, index }) => <NFTCard data={item} dataLength={nftData.length-1} index={index} />}
+                    renderItem={({ item, index }) => (
+                    <NFTCard data={item} dataLength={nftData.length-1} index={index} />
+                    )
+                  }
                     keyExtractor={(item) => item.id} 
                   /> 
               </View>

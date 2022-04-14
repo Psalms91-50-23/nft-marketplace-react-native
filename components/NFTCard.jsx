@@ -4,16 +4,16 @@ import { Platform } from 'react-native';
 import { COLORS, SIZES, SHADOWS, assets, PADDINGS } from '../constants';
 import { CircleButton, RectButton } from './Button';
 import { SubInfo, EthPrice, NFTTitle } from './SubInfo';
-
-
-
+import { useEffect } from "react";
 
 const NFTCard = ({ data, index, dataLength }) => {
 
   const navigation = useNavigation();
   var currentBidAt = Math.max.apply(null, 
     data.bids.map((bidder) => {
-        return bidder.price}));
+        return bidder.price
+      }));
+    data.bids = data.bids.reverse();
   return (
     <View style={{
       backgroundColor: COLORS.white,

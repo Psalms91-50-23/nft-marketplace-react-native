@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView, Image, StatusBar, FlatList } from 'react-nati
 import { COLORS, SIZES, SHADOWS, FONTS, assets, PADDINGS } from "../constants"
 import { CircleButton, RectButton, SubInfo, FocusedStatusBar, 
   DetailsDesc, DetailsBid } from '../components';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const DetailsHeader = ({ data, navigation }) => {
 
@@ -44,7 +44,6 @@ const DetailsHeader = ({ data, navigation }) => {
 
 const Details = ({ route, navigation }) => {
   const { data } = route.params; 
-  const descendingBidOrder = data.bids.reverse();
   return (
     <SafeAreaView style={{
       flex: 1,
@@ -72,7 +71,7 @@ const Details = ({ route, navigation }) => {
           />
         </View>
         <FlatList 
-          data={descendingBidOrder}
+          data={data.bids}
           renderItem={({ item, index }) => <DetailsBid bid={item} index={index} bidLength={data.bids.length-1}/>}
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}
