@@ -3,27 +3,35 @@ import { View, SafeAreaView, FlatList } from 'react-native';
 import { COLORS, NFTData } from "../constants";
 import { NFTCard, HomeHeader, FocusedStatusBar } from '../components';
 
-const Home = () => {
+const dataReversed = NFTData.map(item => {
+  item.bids.reverse();
+  return item
+})
 
-  const [nftData, setNftData] = useState(NFTData)
+const Home = () => {
+  const [nftData, setNftData] = useState(dataReversed)
+  const [filteredData, setFilteredData] = useState(null)
 
   const handleSearch = (value) => {
-    if(!value.length) return setNftData(NFTData)
-    const filteredData = NFTData.filter( item => {
 
+    if(!value.length){
+      setFilteredData(null)
+      return setNftData(dataReversed)
+    }
+
+    const filtered = dataReversed.filter( item => {
       if(item.name.toLowerCase().includes(value.toLowerCase())){
-        item.bids = item.bids.reverse();
-        return item
+        return item;
       }
+    })
+    if(filtered.length){
+      return setFilteredData(filtered);
     }
-      );
-    if(filteredData.length){
-      setNftData(filteredData)
-    }else{
-      console.log({NFTData});
-      setNftData(NFTData)
+    else{
+      setFilteredData(null)
+      return setNftData(dataReversed);
     }
-}
+  }
 
   return (
       <SafeAreaView style={{ 
@@ -45,7 +53,7 @@ const Home = () => {
                 }}>
                   <HomeHeader onSearch={handleSearch} />
                   <FlatList 
-                    data={nftData}
+                    data={filteredData ? filteredData : nftData}
                     renderItem={({ item, index }) => (
                     <NFTCard data={item} dataLength={nftData.length-1} index={index} />
                     )

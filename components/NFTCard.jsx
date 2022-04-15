@@ -12,7 +12,7 @@ const NFTCard = ({ data, index, dataLength }) => {
     data.bids.map((bidder) => {
         return bidder.price
       }));
-    data.bids = data.bids.reverse();
+    // data.bids = data.bids.reverse();
   return (
     <View style={{
       backgroundColor: COLORS.white,
@@ -24,7 +24,7 @@ const NFTCard = ({ data, index, dataLength }) => {
       ...SHADOWS.dark,
       maxWidth: 700,
       marginBottom: index !== dataLength 
-      &&  Platform.OS !== 'ios' || Platform.OS !== 'android' ? SIZES.font :  SIZES.large * 12,
+      &&  (Platform.OS !== 'ios' || Platform.OS !== 'android') ? SIZES.font :  SIZES.large * 12,
       marginTop: index === 0 ? SIZES.base : 0 
       }}
     >

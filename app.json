@@ -2,6 +2,8 @@
   "expo": {
     "name": "nft-market-place",
     "slug": "nft-market-place",
+    "privacy": "public",
+    "description": "Art bidding NFT, UI/UX project only",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
