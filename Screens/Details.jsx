@@ -90,7 +90,7 @@ const Details = ({ route, navigation }) => {
                 {data.bids.length > 0 && (
                   <Text style={{
                     fontSize: SIZES.font,
-                    fontFamily: FONTS.semiBold,
+                    // fontFamily: FONTS.semiBold,
                     color: COLORS.primary,
                     paddingLeft: PADDINGS.extraLarge,
                     

@@ -12,12 +12,12 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
       marginLeft: -3
     }}>
       <Text style={{
-        fontFamily: FONTS.semiBold,
+        // fontFamily: FONTS.semiBold,
         fontSize: titleSize,
         color: COLORS.primary,
       }}>{title}</Text>
       <Text style={{
-        fontFamily: FONTS.regular,
+        // fontFamily: FONTS.regular,
         fontSize: subTitleSize,
         color: COLORS.primary
       }}>{subTitle}</Text>
@@ -44,7 +44,7 @@ export const EthPrice = ({ price }) => {
         }}
       />
       <Text style={{
-        fontFamily: FONTS.medium,
+        // fontFamily: FONTS.medium,
         fontSize: SIZES.font,
         color: COLORS.primary
       }}>{price.toFixed(2)}</Text>
@@ -107,12 +107,12 @@ export const EndDate = () => {
       maxWidth:"50%"
     }}>
       <Text style={{
-        fontFamily: FONTS.regular,
+        // fontFamily: FONTS.regular,
         fontSize: SIZES.small,
         color: COLORS.primary
       }}>Ending In</Text>
       <Text style={{
-        fontFamily: FONTS.semiBold,
+        // fontFamily: FONTS.semiBold,
         fontSize: SIZES.font - 2,
         color: COLORS.primary
       }}>{days}d {hours}h {mins}m</Text>

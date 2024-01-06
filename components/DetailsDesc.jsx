@@ -50,7 +50,7 @@ const DetailsDesc = ({ data }) => {
             }}>
             <Text style={{
                 fontSize: SIZES.font,
-                fontFamily: FONTS.semiBold,
+                // fontFamily: FONTS.semiBold,
                 color: COLORS.primary,
                 paddingLeft: PADDINGS.mediumLarge
                 }}>
@@ -72,7 +72,7 @@ const DetailsDesc = ({ data }) => {
                     <Text 
                         style={{
                             fontSize: SIZES.small,
-                            fontFamily: FONTS.semiBold,
+                            // fontFamily: FONTS.semiBold,
                             color: COLORS.secondary,
                             lineHeight: SIZES.large,
                             

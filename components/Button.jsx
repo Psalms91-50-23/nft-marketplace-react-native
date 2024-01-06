@@ -55,7 +55,7 @@ export const RectButton = ({
       onPress={handlePress}
     >
       <Text style={{
-        fontFamily: FONTS.semiBold,
+        // fontFamily: FONTS.semiBold,
         fontSize: fontSize,
         color: COLORS.white,
         textAlign: "center",

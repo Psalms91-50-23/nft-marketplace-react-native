@@ -52,7 +52,7 @@ const HomeHeader = ({ onSearch }) => {
         marginVertical: SIZES.font / 4
       }}>
         <Text style={{
-          fontFamily: FONTS.regular,
+          // fontFamily: FONTS.regular,
           fontSize: SIZES.small,
           color: COLORS.white,
           marginTop: SIZES.base / 4
@@ -64,7 +64,7 @@ const HomeHeader = ({ onSearch }) => {
         marginVertical: SIZES.font
       }}>
         <Text style={{
-          fontFamily: FONTS.bold,
+          // fontFamily: FONTS.bold,
           fontSize: SIZES.large,
           color: COLORS.white,
           marginTop: SIZES.base / 4
