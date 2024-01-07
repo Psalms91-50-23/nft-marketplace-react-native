@@ -22,6 +22,7 @@ const DetailsHeader = ({ data, navigation }) => {
         }}
       />
       <View style={{
+        paddingVertical: PADDINGS.large,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",

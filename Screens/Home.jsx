@@ -53,13 +53,14 @@ const Home = () => {
                 }}>
                   <HomeHeader onSearch={handleSearch} />
                   <FlatList 
+                    style={{ marginBottom: 200}}
                     data={filteredData ? filteredData : nftData}
                     renderItem={({ item, index }) => (
-                    <NFTCard data={item} dataLength={nftData.length-1} index={index} />
+                    <NFTCard data={item} dataLength={nftData.length-1} index={index}/>
                     )
                   }
                     keyExtractor={(item) => item.id} 
-                  /> 
+                  />
               </View>
               <View style={{
                 position: "absolute",

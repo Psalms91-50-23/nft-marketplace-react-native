@@ -1,4 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack";
+import { Platform } from 'react-native';
 import React from 'react';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import Home from './Screens/Home';

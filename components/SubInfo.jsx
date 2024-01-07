@@ -135,3 +135,6 @@ export const SubInfo = () => {
   )
 }
 
+export const SeparatorComponent = ({ isLastItem }) => {
+  return isLastItem ? <View style={{ marginBottom: 40 }} /> : null;
+};
